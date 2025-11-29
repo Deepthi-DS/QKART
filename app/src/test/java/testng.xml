@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test case suite e-commerce application">
+  <listeners>
+    <listener class-name ="QKART_TESTNG.ListnersTestNG"> </listener>
+  </listeners>
+      <test name="Test case execution on Chrome browser">
+      <parameter name ="TC1_userName" value ="testUser" />
+      <parameter name="TC1_password" value = "abc@123"/>
+      <parameter name="address" value ="Addr line 1 addr Line 2 addr line 3"/>
+        <classes>
+        <parameter name ="TC3_ProductSearchFor" value ="YONEX" />
+        <parameter name="TC5_productSerachFor1" value ="YONEX Smash Badminton Racquet" />
+        <parameter name= "TC5_productSearchFor2" value ="Tan Leatherette Weekender Duffle"/>
+        <parameter name ="TC4_productSearchFor"  value="Running Shoes" />
+        <parameter name ="TC6_productSearchFor1" value ="Xtend Smart Watch" />
+        <parameter name ="TC6_productSearchFor2" value ="Yarine Floor Lamp" />
+        <parameter name ="TC7_productSearchFor" value ="Stylecon 9 Seater RHS Sofa Set " />
+        <parameter name ="TC7_Qty" value ="10" />
+        <parameter name ="TC10_Name" value="crio user" />
+        <parameter name ="TC10_Email" value= "criouser@gmail.com" />
+        <parameter name="TC10_Message" value ="Testing the contact us page" />
+           <class name='QKART_TESTNG.QKART_Tests'/>
+           <groups>
+            <run>
+              <include name ="Sanity_Test" />
+              <include name ="Regression_Test"/>
+              
+            </run>
+           </groups>
+        </classes>
+      </test> <!-- Test -->
+</suite> <!-- Suite -->
